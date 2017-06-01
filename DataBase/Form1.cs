@@ -235,7 +235,7 @@ namespace DataBase
                 while (reader.Read())
                 {
                     for (int i = 0; i < reader.FieldCount; i++)
-                       output.Text += reader[i] + "\t";
+                       output.Text += reader[i].ToString() + "\t";
 
                     output.Text += "\n";
                 }
@@ -248,7 +248,7 @@ namespace DataBase
                 output.Text = "ERROR";
             }
            
-
+            //select pracownik.nr_pracownik, zatrudnienie.nr_filia FROM pracownik INNER JOIN zatrudnienie ON zatrudnienie.nr_pracownik = pracownik.nr_pracownik
             myBase.Close();
         }
     }
